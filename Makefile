@@ -21,7 +21,7 @@ SRCS = ${addprefix ${DIRSRC}, ${SRC}}
 OBJ = ${SRCS:.c=.o}
 
 COMPILER = cc
-CFLAGS = -Wall -Wextra -c -I./includes/
+CFLAGS = -Wall -Wextra -Werror -c -I./includes/
 RM = rm -f
 
 NAME = libftprintf.a
