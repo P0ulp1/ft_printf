@@ -6,7 +6,7 @@
 /*   By: phautena <phautena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 11:07:12 by phautena          #+#    #+#             */
-/*   Updated: 2024/06/10 14:21:25 by phautena         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:04:58 by phautena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,7 @@ void	address_2_hex(size_t n, int *count_ptr)
 	char	*table;
 
 	table = "0123456789abcdef";
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		*count_ptr += 1;
-		n *= -1;
-		address_2_hex(n, count_ptr);
-	}
-	else if (n > 15)
+	if (n > 15)
 	{
 		address_2_hex(n / 16, count_ptr);
 		address_2_hex(n % 16, count_ptr);

@@ -6,7 +6,7 @@
 /*   By: phautena <phautena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 13:14:06 by phautena          #+#    #+#             */
-/*   Updated: 2024/06/10 14:18:37 by phautena         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:04:41 by phautena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	u_conversion(unsigned int n, int *count_ptr)
 {
 	int	n2c;
 
-	if (n < 0)
-		return ;
-	else if (n > 9)
+	if (n > 9)
 	{
 		u_conversion(n / 10, count_ptr);
 		u_conversion(n % 10, count_ptr);
